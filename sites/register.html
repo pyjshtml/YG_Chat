@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, width=device-width">
+    <link rel="icon" href="https://www.farmingtonumc.com/wp-content/uploads/2011/12/cropped-FUMC-Logo-favicon1-32x32.png" sizes="32x32" />
+    <link rel="icon" href="https://www.farmingtonumc.com/wp-content/uploads/2011/12/cropped-FUMC-Logo-favicon1-192x192.png" sizes="192x192" />
+    <title>Login</title>
+    <link rel="stylesheet" href="/static/css/navbar.css">
+    <link rel="stylesheet" href="/static/css/formy.css">
+    <script src="/static/scripts/format.js" charset="utf-8"></script>
+    <script src="/static/scritps/formy.js" charset="utf-8"></script>
+  </head>
+  <body>
+    <div class='title-bar'>
+      <img id='logo' src="https://www.farmingtonumc.com/wp-content/uploads/2011/12/fumc-logo-web.png">
+      <h1 id='title'>Youth Group Chat</h1>
+      <nav class='navbar'>
+        <ul>
+          <li>
+            <a href="//www.farmingtonumc.com/youth">Home</a>
+          </li>
+          <li>
+            <a href="/aboutus">About Us</a>
+          </li>
+          <li>
+            <a href="/">Chat</a>
+          </li>
+          <li class='rt'>
+            <a class='active'>Register</a>
+          </li>
+          <li class='rt'>
+            <a href="/login">Login</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div id='content'>
+      <fieldset class='form'>
+        <legend>Register</legend>
+        <form method="POST">
+          <div class='form-group'>
+            <p for='names'>Name</p>
+            <div class='input-cont'>
+              <input type="text" name="name" class='name' placeholder="" value="" required>
+            </div>
+          </div>
+          <div class='form-group'>
+            <p for='emailInput'>Email</p>
+            <div class='input-cont'>
+              <input type="email" name="email" id='emailInput' placeholder="example@example.com" onblur="process(this)" onfocus="this.removeAttribute('style')" autocomplete="username" value="" required>
+            </div>
+          </div>
+          <div class='form-group'>
+            <p for='passwordInput'>Password</p>
+            <div class='input-cont'>
+              <input type="password" name="password" id='passwordInput' onblur="process(this)" onfocus="this.removeAttribute('style')" autocomplete="current-password" value="" required>
+            </div>
+          </div>
+          <div class='form-group'>
+            <div class='input-cont'>
+              <input type="submit" autofocus value="Login">
+            </div>
+          </div>
+        </form>
+      </fieldset>
+    </div>
+  </body>
+</html>

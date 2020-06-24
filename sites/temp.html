@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Send</title>
+    <script src="/static/scripts/socket.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="/static/css/navbar.css">
+    <link rel="stylesheet" href="/static/css/emails.css">
+    <script src="/static/scripts/format.js" charset="utf-8"></script>
+  </head>
+  <body>
+    <div class='title-bar'>
+      <img id='logo' src="https://www.farmingtonumc.com/wp-content/uploads/2011/12/fumc-logo-web.png">
+      <h1 id='title'>Youth Group Chat</h1>
+      <nav class='navbar'>
+        <ul>
+          <li>
+            <a href="//www.farmingtonumc.com">Home</a>
+          </li>
+          <li>
+            <a href="/aboutus">About Us</a>
+          </li>
+          <li>
+            <a class='active'>Chat</a>
+          </li>
+          <li class='rt'>
+            <a href="/register">Register</a>
+          </li>
+          <li class='rt'>
+            <a href='/login'>Login</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div id='content'>
+      <div class='left-sidebar'>
+        <div id='send-box'>
+          <form onsubmit='return sendMsg()'>
+            <input type="text" id='to' list='baddle' value="">
+            <datalist id='baddle'></datalist>
+            <input type='text' onkeydown="if(event.keyCode==13){sendMsg(this)}">
+            <input type="submit" name="" value="Send">
+          </form>
+        </div>
+        <div id='messages-container'>
+          <div class='msg-cont'>
+            <span class='sendnrecv'><a href='javascript:void(0);' class='user'><span></span>Andrew</a> to <a class='user' href='javascript:void(0);'>Jack</a>:</span>
+            <span class='date'>5/5/2020 11:31 AM</span>
+            <span class='message'>Hello, World!</span>
+            <hr>
+          </div>
+          <div class='msg-cont'>
+            <span class='sendnrecv'>Andrew to Jack:</span>
+            <span class='date'>5/5/2020 12:01 PM</span>
+            <span class='message'>Hello, World!</span>
+            <hr>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

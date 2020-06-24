@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+body,html{
+  width: 100vw;
+  height: 100vh;
+  margin: 0px;
+  padding: 0px;
+  font-family: "Roboto", Verdana, sans-serif;
+  overflow: hidden;
+}
+body{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+.title-bar{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background-color: white;
+}
+.title-bar, .navbar{
+  width: 100vw;
+  font-family: Verdana;
+  overflow: hidden;
+}
+#logo{
+  float: left;
+  margin: 0px;
+  padding: 0px;
+}
+#title{
+  position: relative;
+}
+.navbar{
+  background-color: #CCCCCC;
+}
+.navbar ul{
+  padding: 0px;
+  margin: 0px;
+}
+.navbar li{
+  list-style-type: none;
+  float:left;
+}
+.navbar li a{
+  position: relative;
+  display: block;
+  color: #007bff;
+  text-decoration: none;
+  letter-spacing: 1px;
+  padding: 14px 16px;
+  cursor: default;
+}
+.navbar li a.active{
+  background-color: #075e25 !important;
+  color: white;
+}
+.navbar li a:not(.active):hover{
+  background-color: #F2F2F2;
+  color: #007bff;
+  text-shadow: 1px 1px 2px #007bff;
+  cursor: pointer;
+}
+.navbar li.rt{
+  float: right;
+}
+/**/
+#content{
+  position: absolute;
+  bottom: 0px;
+  width: calc(100vw - 3px);
+  padding-left: 3px;
+}
+/*  */
+.left-sidebar{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 40vw;
+  border-right: 1px solid black;
+  height: 100%;
+}
+@media screen and (min-device-width : 420px) and (max-device-width : 480px) {
+  /*Smartphones*/
+}
+@media screen and (max-width : 480px) {
+  /* Smartphones portait */
+  .left-sidebar{
+    width: 100vw;
+  }
+  .navbar li a{
+    font-size: 0.9em;
+    padding: 10.5px 12px !important;
+  }
+  #logo{
+    width: 34%;
+  }
+  #title{
+    font-size: 1em;
+  }
+}
+@media screen and (min-width : 680px) and (max-width: 950px){
+  /* Smartphones landscape */
+  .left-sidebar{
+    width: 100vw !important;
+  }
+  #send-box{
+    width: calc(50vw - 1px) !important;
+    height: 100%;
+    float: left;
+  }
+  #messages-container{
+    border-top: none !important;
+    border-left: 1px solid #000;
+    width: 50vw !important;
+    height: 100% !important;
+    left: calc(100% - 50vw) !important;
+    right: 0px !important;
+  }
+}

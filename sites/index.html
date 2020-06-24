@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="icon" href="https://www.farmingtonumc.com/wp-content/uploads/2011/12/cropped-FUMC-Logo-favicon1-32x32.png" sizes="32x32" />
+    <link rel="icon" href="https://www.farmingtonumc.com/wp-content/uploads/2011/12/cropped-FUMC-Logo-favicon1-192x192.png" sizes="192x192" />
+    <link rel="stylesheet" href="/static/css/navbar.css">
+    <link rel="stylesheet" href="/static/css/emails.css">
+    <link rel="stylesheet" href="/static/css/send.css">
+    <script src="/static/scripts/format.js" charset="utf-8"></script>
+    <script src="/static/scripts/socket.js" charset="utf-8"></script>
+    <script src="/static/scripts/mobil.js" charset="utf-8"></script>
+    <script src="/static/scripts/chat.js" charset="utf-8"></script>
+    <title>Youth Group Chat</title>
+    <!-- <script type="text/javascript">
+      window.onload = function(){
+        console.log("Index.html");
+        if(isMobile()){
+          console.log("Mobile");
+        } else {
+          console.log("Desktop");
+        }
+      }
+    </script> -->
+  </head>
+  <body>
+    <div class='title-bar'>
+      <img id='logo' src="https://www.farmingtonumc.com/wp-content/uploads/2011/12/fumc-logo-web.png">
+      <h1 id='title'>Youth Group Chat</h1>
+      <nav class='navbar'>
+        <ul>
+          <li>
+            <a href="//www.farmingtonumc.com/youth">Home</a>
+          </li>
+          <li>
+            <a href="/aboutus">About Us</a>
+          </li>
+          <li>
+            <a class='active'>Chat</a>
+          </li>
+          <li class='rt'>
+            <a href="/register">Register</a>
+          </li>
+          <li class='rt'>
+            <a href='/login'>Login</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div id='content'>
+      <div class='left-sidebar'>
+        <div id='send-box'>
+          <form onsubmit='return sendMsg()'>
+            <p>To: <input type="text" id='to' list='baddle' value=""></p>
+            <datalist id='baddle'></datalist>
+            <p>Message: <input type='text' id='message'></p>
+            <input type="submit" name="" value="Send">
+          </form>
+        </div>
+        <div id='messages-container' style='overflow:auto;'></div>
+      </div>
+    </div>
+    <!-- footnote -->
+    <!-- Copyright (c) 2018 Copyright Holder All Rights Reserved. -->
+  </body>
+</html>

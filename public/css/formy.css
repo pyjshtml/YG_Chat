@@ -1,0 +1,78 @@
+body{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  background: url("/static/images/background.webp") center/cover no-repeat;
+}
+input:focus{
+  outline: none;
+}
+input[type=submit]:not(:disabled){
+  background-color: #4caf50;
+  border:none;
+  border-radius: 5px;
+  width: 50%;
+  padding: 5px 8px;
+  margin-top: 10px;
+}
+fieldset.form{
+  width: 40vw;
+  border-radius: 6px;
+  padding-top: 14px;
+  border:none;
+  box-shadow: 1px 1px 3px #444, -1px -1px 3px #444, 1px -1px 3px #444, -1px 1px 3px #444;
+}
+input[type=text]:not(:disabled), input[type=email]:not(:disabled), input[type=password]:not(:disabled){
+  float: right;
+  width: 45%;
+  border: none;
+  border-bottom: 1px solid black;
+  transition: all 0.65s linear;
+  background: transparent;
+  padding: 1px 0px 1px 1px;
+  min-width: 200px;
+}
+form div.input-cont{
+  display: flex;
+  justify-content: center;
+}
+input[type=text]:not(:disabled):focus, input[type=email]:not(:disabled):focus, input[type=password]:not(:disabled):focus{
+  width: 80%;
+}
+.form-group{
+  width: 100%;
+}
+.form-group:not(:first-of-type){
+  margin-top: 10px;
+}
+p[for]{
+  text-align: center;
+  width: 100%;
+  margin: 0px;
+}
+fieldset.form legend{
+  position: relative;
+  top: 14px;
+}
+@-webkit-keyframes autofill {
+    0%,100% {
+        color: #000;
+        background: transparent;
+        width: 80%;
+    }
+}
+input[type=text]:not(:disabled):-webkit-autofill, input[type=email]:not(:disabled):-webkit-autofill, input[type=password]:not(:disabled):-webkit-autofill{
+    -webkit-animation-delay: 10s; /* Safari support - any positive time runs instantly */
+    -webkit-animation-name: autofill;
+    -webkit-animation-fill-mode: both;
+}
+input[type=text]:not(:disabled)::placeholder, input[type=email]:not(:disabled)::placeholder, input[type=password]:not(:disabled)::placeholder{
+  color: black;
+}
+#content{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="icon" href="https://www.farmingtonumc.com/wp-content/uploads/2011/12/cropped-FUMC-Logo-favicon1-32x32.png" sizes="32x32" />
+    <link rel="icon" href="https://www.farmingtonumc.com/wp-content/uploads/2011/12/cropped-FUMC-Logo-favicon1-192x192.png" sizes="192x192" />
+    <link rel="stylesheet" href="/static/css/navbar.css">
+    <title>About Us</title>
+    <script type="text/javascript">
+      const $ = id => document.getElementById(id);
+      function nload(){
+        $("content").style.height = `${document.body.offsetHeight-document.querySelector('.navbar').offsetHeight}px`;
+      }
+    </script>
+  </head>
+  <body onload='nload()'>
+    <nav class='navbar'>
+      <ul>
+        <li>
+          <a href="/">Inbox</a>
+        </li>
+        <li>
+          <a class='active'>About Us</a>
+        </li>
+        <li>
+          <a href="/send">Send</a>
+        </li>
+        <li class='rt'>
+          <a href="/register">Register</a>
+        </li>
+        <li class='rt'>
+          <a href="/login">Login</a>
+        </li>
+      </ul>
+    </nav>
+    <div id='content'>
+      <p>I'm a person</p>
+    </div>
+  </body>
+</html>
